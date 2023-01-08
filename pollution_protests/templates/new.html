@@ -1,0 +1,23 @@
+{% extends 'pagebase.html'%}
+
+{%block content%}
+<br>
+<style>
+    .container-sm * input {
+        margin-bottom: 10px;
+    }
+</style>
+<div class="container-sm">  
+    <div class="card">
+        <div class="card-body">
+            <form action="/new" method="POST">
+                <input class="form-control" name="username" required type="text" placeholder="enter username">
+                <input class="form-control" name="password" required type="password" placeholder="enter password">
+                <input class="form-control" name="messageText" required type="text" placeholder="enter message text">
+                <button  class="btn btn-outline-secondary" type="submit">Post new message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{%endblock%}

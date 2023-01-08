@@ -1,0 +1,19 @@
+{
+    "name": "pollution-protests",
+    "version": "1.0.0",
+    "description": "An proto pollution challenge",
+    "scripts": {
+        "test": "cmgr test",
+        "preinstall": "pip3 install -r requirements.txt",
+        "start": "FLASK_RUN_PORT=5000 FLASK_RUN_HOST=0.0.0.0 python3 -m flask run"
+    },
+    "author": "",
+    "license": "UNLICENSED",
+    "dependencies": {
+        "body-parser": "1.18.3",
+        "express": "4.16.4",
+        "latest-version": "^7.0.0",
+        "lodash": "4.17.4",
+        "nunjucks": "^3.2.3"
+    }
+}

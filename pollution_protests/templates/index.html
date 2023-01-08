@@ -1,0 +1,31 @@
+{%extends 'pagebase.html'%}
+
+{%block content%}
+<br>
+<div class="container">
+    <style>
+        .row * {
+            margin-bottom: 10px;
+        }
+    </style>
+    <div class="row">
+        {% if results is defined %}
+            {% for dict_item in results %}
+                <div class="col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            {% for key, value in dict_item.items() %}
+                                <p>{{ key }} : <span>{{value}}</span></p>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</div>
+
+<p>
+    {{error}}
+</p>
+{%endblock%}

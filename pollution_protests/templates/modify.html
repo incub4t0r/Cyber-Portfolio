@@ -1,0 +1,25 @@
+{% extends 'pagebase.html'%}
+
+{%block content%}
+<br>
+<style>
+    .container-sm * input {
+        margin-bottom: 10px;
+    }
+</style>
+
+<div class="container-sm">  
+    <div class="card">
+        <div class="card-body">
+            <form action="/modify" method="POST">
+                <input class="form-control" name="username" required type="text" placeholder="enter admin username">
+                <input class="form-control" name="password" required type="password" placeholder="enter admin password">
+                <input class="form-control" name="messageID" required autocomplete="off" type="number" placeholder="enter messageID">
+                <input class="form-control" name="messageText" required type="text" placeholder="enter message text">
+                <button  class="btn btn-outline-secondary" type="submit">Modify message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{%endblock%}
